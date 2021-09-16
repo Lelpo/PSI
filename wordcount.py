@@ -71,8 +71,7 @@ def print_top(filename):
         del palabras[clave]
         print(clave, max)
 
-# for value in sorted(palabras.values(), reverse=True)[0:20]:
-# print(value)
+
 # Define print_words(filename) and print_top(filename) functions.
 # You could write a helper utility function that reads a file
 # and builds and returns a word/count dict for it.
