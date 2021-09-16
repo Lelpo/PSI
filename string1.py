@@ -50,8 +50,7 @@ def both_ends(s):
 # Hint: s.replace(stra, strb) returns a version of string s
 # where all instances of stra have been replaced by strb.
 def fix_start(s):
-  aux=s[0]
-  return s.replace(aux, "*").replace("*", aux, 1)
+  return s[0]+s[1:].replace(s[0], "*")
 
 
 # D. MixUp
@@ -62,13 +61,7 @@ def fix_start(s):
 #   'dog', 'dinner' -> 'dig donner'
 # Assume a and b are length 2 or more.
 def mix_up(a, b):
-  aux=a[0]
-  a=a.replace(aux,b[0],1)
-  b=b.replace(b[0],aux, 1)
-  aux2=a[1]
-  a=a.replace(aux2, b[1], 1)
-  b=b.replace(b[1], aux2, 1)
-  return a+" "+b
+  return b[0:2]+a[2:]+" "+a[0:2]+b[2:]
 
 
 # Provided simple test() function used in main() to print
